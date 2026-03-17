@@ -1,0 +1,13 @@
+&input_pw2bgw
+  prefix         = 'GaN',
+  outdir         = './',
+  real_or_complex = 2,              ! 0: real wavefunctions, 1: complex (default 0)
+  wfng_file = 'wfn.complex',
+  wfng_flag = .false.,
+  rhog_flag = .false.,
+  rhog_file = 'rho.complex',
+  vxc_flag = .true.,
+  vxc_file = 'vxc.dat',
+  vxc_diag_nmin = 1,
+  vxc_diag_nmax = 240,
+/

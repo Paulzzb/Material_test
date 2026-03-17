@@ -1,0 +1,39 @@
+&CONTROL
+    calculation = 'scf',
+    prefix = 'GaN',
+    wfcdir = './',
+    outdir = './',
+    pseudo_dir = './',
+    verbosity = 'high',
+    tprnfor = .true.,
+    tstress = .true.,
+    wf_collect = .true
+/
+
+&SYSTEM
+    ibrav =  4,                 ! Hexagonal
+    a = 3.189,                  ! Lattice parameter a in Bohr (e.g., 3.189 Å for GaN)
+    c = 5.185,
+    nbnd = 40
+    nat = 2,                    ! number of atoms
+    ntyp = 2,                   ! number of atomic species
+    ecutwfc = 50.0,             ! plane-wave cutoff energy
+    ecutrho = 200.0,            ! density cutoff energy (typically 4x ecutwfc)
+    occupations = 'fixed',
+/
+
+&ELECTRONS
+    conv_thr = 1.0d-8,
+    mixing_beta = 0.3,
+/
+
+ATOMIC_SPECIES
+Ga  69.723  Ga_ONCV_PBE-1.0.upf
+N   14.007   N_ONCV_PBE-1.0.upf
+
+ATOMIC_POSITIONS crystal
+Ga  0.000000  0.000000  0.000000
+N   0.333333  0.666667  0.375000
+
+K_POINTS automatic
+4 4 4  0 0 0

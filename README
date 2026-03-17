@@ -1,0 +1,64 @@
+## Overview
+This repository contains Quantum ESPRESSO (QE) input files for a set of benchmark systems used in Many-Body Perturbation Theory (MBPT) calculations.
+
+The test systems are selected to systematically cover:
+- Dimensionality: 0D, 1D, 2D, and 3D
+- Electronic properties: metal, semiconductor, and insulator
+
+By combining these categories, we construct a total of **12 classes** of test systems.  
+Each class includes **two representative systems**, and all computational parameters have been carefully **converged**.
+
+## Directory Structure
+
+The directory structure follows a hierarchical naming convention:
+
+``` #bash
+├── <property>_<dimension>/
+│   ├── <system> 
+│       ├── QE 
+│            ├── scf.in
+│            ├── wfn.in
+│            └── bgw.in
+
+```
+
+### Naming Rules
+- `<property>`:  
+  - `metal` (metallic systems)  
+  - `semi` (semiconductors)  
+  - `insulator` (insulating systems)
+
+- `<dimension>`:  
+  - `0D`, `1D`, `2D`, `3D`
+
+- `<system_name>`: specific material or structure name
+
+- `QE/`: contains Quantum ESPRESSO input files
+
+## Example
+
+An example system can be found in the `sample` directory:
+
+├── semi_3D/
+│   ├── GaN/
+│       ├── QE/
+│            ├── scf.in
+│            ├── wfn.in
+│            └── bgw.in
+│       └── <Other_output_folders>
+
+This provides a reference for file organization and input format.
+
+## Notes
+
+- All systems are prepared with convergence-tested parameters to ensure reliability in MBPT workflows.
+- The dataset is intended for benchmarking, testing, and validation purposes.
+
+## Requirements
+
+- [Quantum ESPRESSO](https://www.quantum-espresso.org/)
+- Should be compatible with QE 6.7 and later versions, with hdf5 supported.
+
+## License
+
+(To be added)

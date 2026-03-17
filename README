@@ -13,6 +13,7 @@ Each class includes **two representative systems**, and all computational parame
 The directory structure follows a hierarchical naming convention:
 
 ``` #bash
+├── doubt_system: contains some problematic systems.
 ├── <property>_<dimension>/
 │   ├── <system> 
 │       ├── QE 

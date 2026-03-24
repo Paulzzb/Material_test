@@ -1,0 +1,34 @@
+&CONTROL
+calculation = 'nscf'
+restart_mode = 'from_scratch'
+outdir = './'
+prefix = 'phos'
+pseudo_dir = '/public/home/xiongyf/pp/sg15'
+/
+&SYSTEM
+ibrav = 0
+nat=           4
+ntyp=           1
+occupations = 'fixed'
+ecutwfc = 70
+ecutrho = 280
+nbnd = 300
+/
+&ELECTRONS
+electron_maxstep = 250
+conv_thr = 1.0D-10
+diagonalization = 'david'
+/
+ATOMIC_SPECIES
+P 30.974 P_ONCV_PBE-1.0.upf
+CELL_PARAMETERS angstrom
+     4.6217714153118674    0.0000000000000000    0.0000000000000000
+     0.0000000000000000    3.2988013489939840    0.0000000000000000
+     0.0000000000000000    0.0000000000000000   17.1097927094000006
+ATOMIC_POSITIONS (crystal)
+P  0.5891307200384279  0.0000000000000000  0.4385478009857373
+P  0.4108692799615720 -0.0000000000000000  0.5614521990142628
+P  0.0891307200384281  0.5000000000000000  0.5614521990142628
+P  0.9108692799615721  0.5000000000000000  0.4385478009857373
+K_POINTS { automatic }
+7 10 1 0 0 0

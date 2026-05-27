@@ -1,0 +1,15 @@
+&input_pw2bgw
+  prefix = 'BN_chain'
+  outdir = './'
+  real_or_complex = 2
+  wfng_flag = .true.
+  wfng_file = 'WFN'
+  rhog_flag = .true.
+  rhog_file = 'RHO'
+  vxc_flag = .true.
+  vxc_file = 'vxc.dat'
+  vxc_diag_nmin = 1
+  vxc_diag_nmax = 40
+  vxcg_flag = .false.
+  vxcg_file = 'VXC'
+/

@@ -1,0 +1,38 @@
+&CONTROL
+  calculation = 'nscf'
+  restart_mode = 'from_scratch'
+  outdir = './'
+  pseudo_dir = './'
+  verbosity = 'high'
+  wf_collect = .true.
+  prefix = 'hBN_2x1'
+/
+&SYSTEM
+  ibrav = 0
+  nat = 4
+  ntyp = 2
+  occupations = 'fixed'
+  ecutwfc = 80.0
+  ecutrho = 320.0
+  nbnd = 160
+/
+&ELECTRONS
+  conv_thr = 1.0d-8
+  mixing_beta = 0.3
+  electron_maxstep = 250
+  diagonalization = 'david'
+/
+ATOMIC_SPECIES
+B 10.810 B_ONCV_PBE-1.0.upf
+N 14.007 N_ONCV_PBE-1.0.upf
+CELL_PARAMETERS angstrom
+   5.0247400000   0.0000000000   0.0000000000
+  -1.2561850000   2.1757770000   0.0000000000
+   0.0000000000   0.0000000000   15.0000000000
+ATOMIC_POSITIONS crystal
+B   0.0000000000   0.0000000000   0.5000000000
+N   0.1666666667   0.6666666667   0.5000000000
+B   0.5000000000   0.0000000000   0.5000000000
+N   0.6666666667   0.6666666667   0.5000000000
+K_POINTS automatic
+6 10 1  0 0 0

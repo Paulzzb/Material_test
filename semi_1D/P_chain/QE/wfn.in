@@ -1,0 +1,35 @@
+&CONTROL
+  calculation = 'nscf'
+  restart_mode = 'from_scratch'
+  outdir = './'
+  pseudo_dir = './'
+  verbosity = 'high'
+  wf_collect = .true.
+  prefix = 'P_chain'
+/
+&SYSTEM
+  ibrav = 0
+  nat = 2
+  ntyp = 1
+  occupations = 'fixed'
+  ecutwfc = 70.0
+  ecutrho = 280.0
+  nbnd = 36
+/
+&ELECTRONS
+  conv_thr = 1.0d-8
+  mixing_beta = 0.3
+  electron_maxstep = 250
+  diagonalization = 'david'
+/
+ATOMIC_SPECIES
+P 30.974 P_ONCV_PBE-1.0.upf
+CELL_PARAMETERS angstrom
+   14.0000000000   0.0000000000   0.0000000000
+   0.0000000000   14.0000000000   0.0000000000
+   0.0000000000   0.0000000000   3.3000000000
+ATOMIC_POSITIONS crystal
+P   0.5000000000   0.5000000000   0.0000000000
+P   0.5000000000   0.5000000000   0.5000000000
+K_POINTS automatic
+1 1 12  0 0 0

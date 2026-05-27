@@ -1,0 +1,35 @@
+&CONTROL
+  calculation = 'scf'
+  restart_mode = 'from_scratch'
+  outdir = './'
+  pseudo_dir = './'
+  verbosity = 'high'
+  wf_collect = .true.
+  prefix = 'BN_molecule'
+/
+&SYSTEM
+  ibrav = 0
+  nat = 2
+  ntyp = 2
+  occupations = 'fixed'
+  ecutwfc = 70.0
+  ecutrho = 280.0
+/
+&ELECTRONS
+  conv_thr = 1.0d-8
+  mixing_beta = 0.3
+  electron_maxstep = 250
+  diagonalization = 'david'
+/
+ATOMIC_SPECIES
+B 10.810 B_ONCV_PBE-1.0.upf
+N 14.007 N_ONCV_PBE-1.0.upf
+CELL_PARAMETERS angstrom
+   16.0000000000   0.0000000000   0.0000000000
+   0.0000000000   16.0000000000   0.0000000000
+   0.0000000000   0.0000000000   16.0000000000
+ATOMIC_POSITIONS crystal
+B   0.5000000000   0.5000000000   0.4550000000
+N   0.5000000000   0.5000000000   0.5450000000
+K_POINTS automatic
+1 1 1  0 0 0
